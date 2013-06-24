@@ -12,7 +12,9 @@ git://github.com/kien/ctrlp.vim.git
 git://github.com/kien/rainbow_parentheses.vim.git
 git://github.com/krisajenkins/vim-pipe.git
 git://github.com/majutsushi/tagbar.git
+git://github.com/mattn/webapi-vim.git
 git://github.com/mattn/zencoding-vim.git
+git://github.com/mmozuras/vim-github-comment.git
 git://github.com/msanders/snipmate.vim.git
 git://github.com/scrooloose/nerdcommenter.git
 git://github.com/scrooloose/nerdtree.git
@@ -29,6 +31,7 @@ git://github.com/tpope/vim-rsi.git
 git://github.com/tpope/vim-sensible.git
 git://github.com/tpope/vim-sleuth.git
 git://github.com/tpope/vim-surround.git
+git://github.com/tpope/vim-tbone.git
 git://github.com/tpope/vim-unimpaired.git
 git://github.com/vim-scripts/mru.vim.git
 git://github.com/vim-scripts/paredit.vim.git

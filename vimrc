@@ -5,6 +5,7 @@ syntax on
 filetype plugin indent on
 
 let mapleader = ","
+let g:github_user = 'anykao'
 let g:ScreenImpl = 'Tmux'
 
 set undodir^=~/.vim/undo
