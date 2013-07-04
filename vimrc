@@ -19,7 +19,6 @@ set fileencodings=utf-8,euc-jp,cp932
 " alt+n or alt+p to navigate between entries in QuickFix
 " noremap <silent> <a-p> :cp <cr>
 " noremap <silent> <a-n> :cn <cr>
-noremap <leader>r   :MRU<CR>
 noremap <leader>cd  :cd %:p:h<CR>
 noremap <leader>nf  :NERDTreeFind<CR>
 noremap <Leader>nt  :NERDTreeToggle<CR>
@@ -85,9 +84,31 @@ function! VisualSearch(direction) range
     let @" = l:saved_reg
 endfunction
 
+" Unite
+let g:unite_source_history_yank_enable = 1
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+nnoremap <leader>t :<C-u>Unite file_rec/async:!<cr>
+nnoremap <leader>f :<C-u>Unite file<cr>
+nnoremap <leader>r :<C-u>Unite file_mru<cr>
+nnoremap <leader>o :<C-u>Unite outline<cr>
+nnoremap <leader>y :<C-u>Unite history/yank<cr>
+nnoremap <leader>e :<C-u>Unite buffer<cr>
+
+" Custom mappings for the unite buffer
+autocmd FileType unite call s:unite_settings()
+function! s:unite_settings()
+  " Play nice with supertab
+  let b:SuperTabDisabled=1
+  " Enable navigation with control-j and control-k in insert mode
+  imap <buffer> <C-j>   <Plug>(unite_select_next_line)
+  imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
+endfunction
+
 au BufNewFile,BufRead *.clj,*cljs set filetype=clojure
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
+au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
