@@ -2,5 +2,7 @@
                     [lein-localrepo  "0.5.0"]]
          :dependencies  [[spyscope  "0.1.3"]]
          :injections  [(require 'spyscope.core)]
-         }}
+         }
+ :dev  {:dependencies  [[alembic  "0.1.0"]]}
+ }
 
