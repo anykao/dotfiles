@@ -24,6 +24,11 @@ function doinit (){
 	for url in $urls; do
 		git clone $url
 	done
+	if [ -d vimproc.vim ]; then
+		cd vimproc.vim
+		make
+		cd..
+	fi
 	cd ..
 }
 
