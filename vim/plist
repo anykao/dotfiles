@@ -34,4 +34,6 @@ git://github.com/tpope/vim-unimpaired.git
 git://github.com/vim-scripts/mru.vim.git
 git://github.com/vim-scripts/paredit.vim.git
 git://github.com/vim-scripts/vimwiki.git
+https://github.com/bling/vim-airline
 https://github.com/Shougo/unite.vim.git
+https://github.com/Shougo/vimproc.vim.git
