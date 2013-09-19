@@ -1,12 +1,36 @@
 set nocompatible
-filetype off
-call pathogen#infect()
-syntax on
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+call neobundle#rc(expand('~/.vim/bundle/'))
+" Let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'guns/vim-clojure-static'
+NeoBundle 'kien/rainbow_parentheses.vim'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'tpope/vim-abolish'
+NeoBundle 'tpope/vim-eunuch'
+NeoBundle 'tpope/vim-fireplace'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-sensible'
+NeoBundle 'tpope/vim-sleuth'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'vim-scripts/paredit.vim'
 filetype plugin indent on
+
+syntax enable
+set background=dark
+colorscheme solarized
 
 let mapleader = ","
 let g:github_user = 'anykao'
-let g:ScreenImpl = 'Tmux'
 
 set undodir^=~/.vim/undo
 set hlsearch
@@ -46,8 +70,6 @@ cabbrev h vert h
 let g:NERDTreeChDirMode=2
 let g:NERDTreeShowBookmarks=1
 let g:NERDTreeDirArrows=0
-" Vim-Powerline
-let g:Powerline_symbols='fancy'
 " paredit option
 let g:paredit_electric_return=0
 
