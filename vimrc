@@ -5,6 +5,7 @@ endif
 call neobundle#rc(expand('~/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
+
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'altercation/vim-colors-solarized'
@@ -16,6 +17,7 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'sickill/vim-monokai'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-eunuch'
@@ -28,11 +30,9 @@ NeoBundle 'tpope/vim-sleuth'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'vim-scripts/paredit.vim'
-filetype plugin indent on
 
+filetype plugin indent on
 syntax enable
-set background=dark
-colorscheme solarized
 
 let mapleader = ","
 let g:github_user = 'anykao'
