@@ -5,6 +5,7 @@ endif
 call neobundle#rc(expand('~/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'Raimondi/delimitMate' 
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'altercation/vim-colors-solarized'
