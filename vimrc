@@ -38,6 +38,7 @@ colorscheme solarized
 
 let mapleader = ","
 let g:github_user = 'anykao'
+let g:gitgutter_realtime = 0
 
 set undodir^=~/.vim/undo
 set hlsearch
