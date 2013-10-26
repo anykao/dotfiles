@@ -5,12 +5,13 @@ endif
 call neobundle#rc(expand('~/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
-
+NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'chrisbra/csv.vim'
+NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'guns/vim-clojure-static'
 NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'mattn/emmet-vim'
@@ -36,6 +37,7 @@ syntax enable
 
 let mapleader = ","
 let g:github_user = 'anykao'
+let g:gitgutter_realtime = 0
 
 set undodir^=~/.vim/undo
 set hlsearch
