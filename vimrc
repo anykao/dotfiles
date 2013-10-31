@@ -5,6 +5,9 @@ endif
 call neobundle#rc(expand('~/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
+"NeoBundle 'scrooloose/syntastic'
+"NeoBundle 'Valloric/YouCompleteMe'
+
 NeoBundle 'Blackrush/vim-gocode'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'Shougo/unite.vim'
@@ -12,13 +15,13 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'chrisbra/csv.vim'
+NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'guns/vim-clojure-static'
 NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'scrooloose/syntastic'
 NeoBundle 'sickill/vim-monokai'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'tpope/vim-endwise'
@@ -60,8 +63,8 @@ noremap <Leader>yr  :YRShow<CR>
 "For editing the vimrc more easily:
 nnoremap <leader>ev :vs $MYVIMRC<CR>
 nnoremap <leader>sv :so $MYVIMRC<CR>
-nnoremap <silent> <C-H> gT
-nnoremap <silent> <C-L> gt
+nnoremap <silent> <C-P> gT
+nnoremap <silent> <C-N> gt
 " Use <C-K> to clear the highlighting of :set hlsearch.
 nnoremap <silent> <C-K> :nohlsearch<CR><C-K>
 " Wrapped lines goes down/up to next row, rather than next line in file.
@@ -69,8 +72,6 @@ nnoremap j gj
 nnoremap k gk
 vnoremap < <gv
 vnoremap > >gv
-nmap <leader>d <C-W>W<C-D><C-W>W
-nmap <leader>u <C-W>W<C-U><C-W>W
 "mm to go to matching
 map mm %
 
