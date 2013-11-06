@@ -37,7 +37,7 @@ NeoBundle 'tpope/vim-sleuth'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'vim-scripts/paredit.vim'
-NeoBundle 'nelstrom/vim-visual-star-search'
+NeoBundle 'thinca/vim-visualstar'
 
 filetype plugin indent on
 syntax enable
