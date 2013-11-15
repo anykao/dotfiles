@@ -7,12 +7,13 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 "NeoBundle 'scrooloose/syntastic'
 "NeoBundle 'Valloric/YouCompleteMe'
+"NeoBundle 'airblade/vim-gitgutter'
 
 NeoBundle 'Blackrush/vim-gocode'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'benmills/vimux'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'chrisbra/csv.vim'
 NeoBundle 'christoomey/vim-tmux-navigator'
@@ -20,9 +21,11 @@ NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'guns/vim-clojure-static'
 NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'mattn/emmet-vim'
+NeoBundle 'mhinz/vim-signify'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'sickill/vim-monokai'
+NeoBundle 'thinca/vim-visualstar'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-eunuch'
@@ -37,7 +40,6 @@ NeoBundle 'tpope/vim-sleuth'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'vim-scripts/paredit.vim'
-NeoBundle 'thinca/vim-visualstar'
 
 filetype plugin indent on
 syntax enable
@@ -94,16 +96,6 @@ nnoremap <leader>r :<C-u>Unite file_mru<cr>
 nnoremap <leader>o :<C-u>Unite outline<cr>
 nnoremap <leader>y :<C-u>Unite history/yank<cr>
 nnoremap <leader>e :<C-u>Unite buffer<cr>
-
-" Custom mappings for the unite buffer
-autocmd FileType unite call s:unite_settings()
-function! s:unite_settings()
-  " Play nice with supertab
-  let b:SuperTabDisabled=1
-  " Enable navigation with control-j and control-k in insert mode
-  imap <buffer> <C-j>   <Plug>(unite_select_next_line)
-  imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
-endfunction
 
 au BufNewFile,BufRead *.clj,*cljs set filetype=clojure
 au VimEnter * RainbowParenthesesToggle
