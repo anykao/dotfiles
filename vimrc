@@ -22,6 +22,7 @@ NeoBundle 'guns/vim-clojure-static'
 NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'mattn/emmet-vim'
+NeoBundle 'junegunn/vim-easy-align'
 NeoBundle 'mhinz/vim-signify'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'scrooloose/nerdcommenter'
@@ -95,7 +96,8 @@ noremap H ^
 noremap L g_
 nnoremap <silent> h gT
 nnoremap <silent> l gt
-cabbrev h tab h
+"cabbrev h tab h
+cabbrev h vert h
 
 " nerdtree options
 let g:NERDTreeChDirMode=2
@@ -120,6 +122,9 @@ nnoremap <leader>vl :VimuxRunLastCommand<CR>
 nnoremap <leader>vi :VimuxInspectRunner<CR>
 nnoremap <leader>vq :VimuxCloseRunner<CR>
 nnoremap <leader>vx :VimuxInterruptRunner<CR>
+
+vnoremap <silent> <Enter> :EasyAlign<Enter>
+vnoremap <silent> <Leader><Enter> :LiveEasyAlign<Enter>
 
 au BufNewFile,BufRead *.clj,*cljs set filetype=clojure
 au VimEnter * RainbowParenthesesToggle
