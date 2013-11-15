@@ -110,8 +110,8 @@ let g:paredit_electric_return=0
 
 " Unite
 let g:unite_source_history_yank_enable = 1
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-nnoremap <leader>t :<C-u>Unite file_rec/async:!<cr>
+cal unite#filters#matcher_default#use(['matcher_fuzzy'])
+nnoremap <leader>t :<C-u>Unite tab<cr>
 nnoremap <leader>f :<C-u>Unite file<cr>
 nnoremap <leader>r :<C-u>Unite file_mru<cr>
 nnoremap <leader>o :<C-u>Unite outline<cr>
