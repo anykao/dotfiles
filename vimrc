@@ -120,7 +120,7 @@ nnoremap <leader>e :<C-u>Unite buffer<cr>
 
 nnoremap <leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
 nnoremap <leader>vp :VimuxPromptCommand<CR>
-nnoremap <leader>vl :VimuxRunlastCommand<CR>
+nnoremap <leader>vl :VimuxRunLastCommand<CR>
 nnoremap <leader>vi :VimuxInspectRunner<CR>
 nnoremap <leader>vq :VimuxCloseRunner<CR>
 nnoremap <leader>vx :VimuxInterruptRunner<CR>
