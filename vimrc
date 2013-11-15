@@ -26,6 +26,9 @@ NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'sickill/vim-monokai'
 NeoBundle 'thinca/vim-visualstar'
+NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'majutsushi/tagbar'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-eunuch'
@@ -46,8 +49,9 @@ syntax enable
 
 let mapleader = ","
 let g:github_user = 'anykao'
-let g:gitgutter_realtime = 0
+"let g:gitgutter_realtime = 0
 
+set t_Co=256
 set undodir^=~/.vim/undo
 set hlsearch
 set nonumber
@@ -66,10 +70,8 @@ noremap <Leader>yr  :YRShow<CR>
 "For editing the vimrc more easily:
 nnoremap <leader>ev :vs $MYVIMRC<CR>
 nnoremap <leader>sv :so $MYVIMRC<CR>
-nnoremap <silent> <C-P> gT
-nnoremap <silent> <C-N> gt
 " Use <C-K> to clear the highlighting of :set hlsearch.
-nnoremap <silent> <C-K> :nohlsearch<CR><C-K>
+nnoremap <silent> <TAB> :nohlsearch<CR><TAB>
 " Wrapped lines goes down/up to next row, rather than next line in file.
 nnoremap j gj
 nnoremap k gk
@@ -77,8 +79,13 @@ vnoremap < <gv
 vnoremap > >gv
 "mm to go to matching
 map mm %
-
-cabbrev h vert h
+noremap H ^
+noremap L g_
+nnoremap <silent> h gT
+nnoremap <silent> l gt
+nnoremap + <c-a>
+nnoremap - <c-x>
+cabbrev h tab h
 
 " nerdtree options
 let g:NERDTreeChDirMode=2
@@ -96,6 +103,7 @@ nnoremap <leader>r :<C-u>Unite file_mru<cr>
 nnoremap <leader>o :<C-u>Unite outline<cr>
 nnoremap <leader>y :<C-u>Unite history/yank<cr>
 nnoremap <leader>e :<C-u>Unite buffer<cr>
+
 
 au BufNewFile,BufRead *.clj,*cljs set filetype=clojure
 au VimEnter * RainbowParenthesesToggle
