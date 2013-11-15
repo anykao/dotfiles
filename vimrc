@@ -47,6 +47,7 @@ NeoBundle 'vim-scripts/paredit.vim'
 
 filetype plugin indent on
 syntax enable
+NeoBundleCheck
 try
   source ~/.vimrc.local
 catch
@@ -80,25 +81,20 @@ set iskeyword-=_
 
 noremap <leader>cd  :cd %:p:h<CR>
 noremap <leader>nf  :NERDTreeFind<CR>
-noremap <Leader>nt  :NERDTreeToggle<CR>
-"For editing the vimrc more easily:
+noremap <leader>nt  :NERDTreeToggle<CR>
 nnoremap <leader>ev :vs $MYVIMRC<CR>
 nnoremap <leader>sv :so $MYVIMRC<CR>
-" Use <C-K> to clear the highlighting of :set hlsearch.
 nnoremap <silent> <TAB> :nohlsearch<CR><TAB>
 " Wrapped lines goes down/up to next row, rather than next line in file.
 nnoremap j gj
 nnoremap k gk
 vnoremap < <gv
 vnoremap > >gv
-"mm to go to matching
 map mm %
 noremap H ^
 noremap L g_
 nnoremap <silent> h gT
 nnoremap <silent> l gt
-nnoremap + <c-a>
-nnoremap - <c-x>
 cabbrev h tab h
 
 " nerdtree options
