@@ -20,15 +20,15 @@ NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'guns/vim-clojure-static'
 NeoBundle 'kien/rainbow_parentheses.vim'
+NeoBundle 'majutsushi/tagbar'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'mhinz/vim-signify'
+NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'sickill/vim-monokai'
-NeoBundle 'thinca/vim-visualstar'
 NeoBundle 'terryma/vim-multiple-cursors'
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'majutsushi/tagbar'
+NeoBundle 'thinca/vim-visualstar'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-eunuch'
@@ -42,31 +42,45 @@ NeoBundle 'tpope/vim-sensible'
 NeoBundle 'tpope/vim-sleuth'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'vim-scripts/paredit.vim'
 
 filetype plugin indent on
 syntax enable
+try
+  source ~/.vimrc.local
+catch
+endtry
+syntax on
 
 let mapleader = ","
-let g:github_user = 'anykao'
-"let g:gitgutter_realtime = 0
-
+let g:mapleader = ","
+let maplocalleader = ","
+let g:maplocalleader = ","
 set t_Co=256
-set undodir^=~/.vim/undo
+colorscheme jellybeans
+
+set clipboard=unnamed
+set encoding=utf-8 " Necessary to show unicode glyphs
+set ffs=unix,dos
+set fileencodings=utf-8,euc-jp,cp932
+set hidden
 set hlsearch
+set ignorecase
+set list
+set nobackup
+set nowritebackup
+set noswapfile
 set nonumber
 set nowrap
-set list
-set ignorecase
-set smartcase
 set pastetoggle=<f12>
-set ffs=unix,dos
-set encoding=utf-8 " Necessary to show unicode glyphs
-set fileencodings=utf-8,euc-jp,cp932
+set smartcase
+set undodir^=~/.vim/undo
+set iskeyword-=_
+
 noremap <leader>cd  :cd %:p:h<CR>
 noremap <leader>nf  :NERDTreeFind<CR>
 noremap <Leader>nt  :NERDTreeToggle<CR>
-noremap <Leader>yr  :YRShow<CR>
 "For editing the vimrc more easily:
 nnoremap <leader>ev :vs $MYVIMRC<CR>
 nnoremap <leader>sv :so $MYVIMRC<CR>
@@ -104,6 +118,12 @@ nnoremap <leader>o :<C-u>Unite outline<cr>
 nnoremap <leader>y :<C-u>Unite history/yank<cr>
 nnoremap <leader>e :<C-u>Unite buffer<cr>
 
+nnoremap <leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
+nnoremap <leader>vp :VimuxPromptCommand<CR>
+nnoremap <leader>vl :VimuxRunlastCommand<CR>
+nnoremap <leader>vi :VimuxInspectRunner<CR>
+nnoremap <leader>vq :VimuxCloseRunner<CR>
+nnoremap <leader>vx :VimuxInterruptRunner<CR>
 
 au BufNewFile,BufRead *.clj,*cljs set filetype=clojure
 au VimEnter * RainbowParenthesesToggle
