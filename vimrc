@@ -12,6 +12,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Blackrush/vim-gocode'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'evanmiller/nginx-vim-syntax'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'basyura/unite-rails'
 NeoBundle 'benmills/vimux'
@@ -30,6 +31,7 @@ NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'sickill/vim-monokai'
+NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'thinca/vim-visualstar'
 NeoBundle 'tpope/vim-abolish'
@@ -81,6 +83,7 @@ set pastetoggle=<f12>
 set smartcase
 set undodir^=~/.vim/undo
 set iskeyword-=_
+set iskeyword+=:
 
 noremap <leader>cd  :cd %:p:h<CR>
 noremap <leader>nf  :NERDTreeFind<CR>
@@ -128,8 +131,12 @@ nnoremap <leader>vi :VimuxInspectRunner<CR>
 nnoremap <leader>vq :VimuxCloseRunner<CR>
 nnoremap <leader>vx :VimuxInterruptRunner<CR>
 
+map K <Plug>(expand_region_expand)
+map J <Plug>(expand_region_shrink)
+
 vnoremap <silent> <Enter> :EasyAlign<Enter>
-vnoremap <silent> <Leader><Enter> :LiveEasyAlign<Enter>
+vnoremap <silent> <leader><Enter> :LiveEasyAlign<Enter>
+
 
 au BufNewFile,BufRead *.clj,*cljs set filetype=clojure
 au VimEnter * RainbowParenthesesToggle
