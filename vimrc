@@ -13,17 +13,19 @@ NeoBundle 'Blackrush/vim-gocode'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'basyura/unite-rails'
 NeoBundle 'benmills/vimux'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'chrisbra/csv.vim'
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'guns/vim-clojure-static'
+NeoBundle 'junegunn/vim-easy-align'
 NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'mattn/emmet-vim'
-NeoBundle 'junegunn/vim-easy-align'
 NeoBundle 'mhinz/vim-signify'
+NeoBundle 'mileszs/ack.vim'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/nerdtree'
@@ -60,7 +62,7 @@ let g:mapleader = ","
 let maplocalleader = ","
 let g:maplocalleader = ","
 set t_Co=256
-colorscheme jellybeans
+"colorscheme jellybeans
 
 set clipboard=unnamed
 set encoding=utf-8 " Necessary to show unicode glyphs
@@ -105,6 +107,7 @@ let g:NERDTreeShowBookmarks=1
 let g:NERDTreeDirArrows=0
 " paredit option
 let g:paredit_electric_return=0
+let g:gocode_gofmt_tabwidth=8
 
 " Unite
 let g:unite_source_history_yank_enable = 1
@@ -116,6 +119,8 @@ nnoremap <leader>o :<C-u>Unite outline<cr>
 nnoremap <leader>y :<C-u>Unite history/yank<cr>
 nnoremap <leader>e :<C-u>Unite buffer<cr>
 
+let g:VimuxOrientation = "h"
+let g:VimuxHeight = "30"
 nnoremap <leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
 nnoremap <leader>vp :VimuxPromptCommand<CR>
 nnoremap <leader>vl :VimuxRunLastCommand<CR>
