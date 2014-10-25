@@ -1,58 +1,37 @@
-if has('vim_starting')
-  set nocompatible               " Be iMproved
+call plug#begin('~/.vim/plugged/')
 
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
+Plug 'Raimondi/delimitMate'
+Plug 'bling/vim-airline'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'guns/vim-clojure-static'
+Plug 'kien/ctrlp.vim'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'mattn/emmet-vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'sickill/vim-monokai'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'thinca/vim-visualstar'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-rsi'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'vim-scripts/paredit.vim'
+Plug 'fatih/vim-go'
 
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
-
-NeoBundle 'Raimondi/delimitMate'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'editorconfig/editorconfig-vim'
-NeoBundle 'guns/vim-clojure-static'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'kien/rainbow_parentheses.vim'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'sickill/vim-monokai'
-NeoBundle 'terryma/vim-multiple-cursors'
-NeoBundle 'thinca/vim-visualstar'
-NeoBundle 'tpope/vim-abolish'
-NeoBundle 'tpope/vim-endwise'
-NeoBundle 'tpope/vim-eunuch'
-NeoBundle 'tpope/vim-fireplace'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-git'
-NeoBundle 'tpope/vim-markdown'
-NeoBundle 'tpope/vim-sensible'
-NeoBundle 'tpope/vim-rsi'
-NeoBundle 'tpope/vim-sleuth'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-unimpaired'
-NeoBundle 'vim-scripts/paredit.vim'
-NeoBundle 'fatih/vim-go'
-
-call neobundle#end()
-
-" Required:
-filetype plugin indent on
+call plug#end()
 
 let mapleader = ","
-set t_Co=256
 
 set clipboard=unnamed
-set encoding=utf-8 " Necessary to show unicode glyphs
 set ffs=unix,dos
 set fileencodings=utf-8,euc-jp,cp932
 set hidden
@@ -63,7 +42,7 @@ set nobackup
 set backupdir=
 set nowritebackup
 set noswapfile
-set nonumber
+set number
 set nowrap
 set pastetoggle=<f12>
 set smartcase
@@ -85,7 +64,6 @@ map mm %
 noremap H ^
 noremap L g_
 
-"cabbrev h tab h
 cabbrev h vert h
 
 " nerdtree options
