@@ -4,12 +4,10 @@ Plug 'Raimondi/delimitMate'
 Plug 'bling/vim-airline'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'guns/vim-clojure-static'
-Plug 'kien/ctrlp.vim'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-Plug 'sickill/vim-monokai'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'thinca/vim-visualstar'
 Plug 'tpope/vim-abolish'
@@ -60,16 +58,16 @@ nnoremap j gj
 nnoremap k gk
 vnoremap < <gv
 vnoremap > >gv
-map mm %
 noremap H ^
 noremap L g_
 
-cabbrev h vert h
+cabbrev h tab h
 
 " nerdtree options
 let g:NERDTreeChDirMode=2
 let g:NERDTreeShowBookmarks=1
 let g:NERDTreeDirArrows=0
+
 " paredit option
 let g:paredit_electric_return=0
 let g:gocode_gofmt_tabwidth=8
