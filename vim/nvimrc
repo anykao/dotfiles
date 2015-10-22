@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged/')
+call plug#begin('~/.nvim/plugged/')
 
 Plug 'Raimondi/delimitMate'
 Plug 'bling/vim-airline'
@@ -24,10 +24,18 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/paredit.vim'
 Plug 'fatih/vim-go'
+Plug 'tyru/open-browser.vim'
+Plug 'Valloric/YouCompleteMe'
+Plug 'wting/rust.vim'
+Plug 'cespare/vim-toml'
+Plug 'rking/ag.vim'
+
 
 call plug#end()
 
 let mapleader = ","
+
+" colorscheme Tomorrow-Night-Eighties
 
 set clipboard=unnamed
 set ffs=unix,dos
@@ -44,15 +52,18 @@ set number
 set nowrap
 set pastetoggle=<f12>
 set smartcase
-set undodir^=~/.vim/undo
-set directory^=~/.vim/undo
+set undodir^=~/.nvim/undo
+set directory^=~/.nvim/undo
 set iskeyword-=_
 set iskeyword+=:
+set clipboard+=unnamedplus
+set completeopt-=preview
 
 noremap <leader>cd  :cd %:p:h<CR>
-noremap <leader>f  :NERDTreeFind<CR>
+noremap <leader>f   :NERDTreeFind<CR>
 nnoremap <leader>ev :vs $MYVIMRC<CR>
 nnoremap <leader>sv :so $MYVIMRC<CR>
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
 nnoremap j gj
 nnoremap k gk
@@ -71,6 +82,15 @@ let g:NERDTreeDirArrows=0
 " paredit option
 let g:paredit_electric_return=0
 let g:gocode_gofmt_tabwidth=8
+
+" open-browser
+let g:netrw_nogx = 1 " disable netrw's gx mapping. 
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
+
+let g:go_fmt_autosave = 1
+let g:go_bin_path = expand("~/.gotools")
+
 
 au BufNewFile,BufRead *.clj,*cljs set filetype=clojure
 au VimEnter * RainbowParenthesesToggle
