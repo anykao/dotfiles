@@ -59,9 +59,9 @@ set iskeyword+=:
 set clipboard+=unnamedplus
 set completeopt-=preview
 
-noremap <leader>cd  :cd %:p:h<CR>
-noremap <leader>f   :NERDTreeFind<CR>
-noremap <C-n>       :NERDTreeToggle<CR>
+nnoremap <leader>cd  :cd %:p:h<CR>
+nnoremap <leader>f   :NERDTreeFind<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <leader>ev :vs $MYVIMRC<CR>
 nnoremap <leader>sv :so $MYVIMRC<CR>
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
@@ -70,8 +70,8 @@ nnoremap j gj
 nnoremap k gk
 vnoremap < <gv
 vnoremap > >gv
-noremap H ^
-noremap L g_
+nnoremap H ^
+nnoremap L g_
 
 cabbrev h tab h
 
