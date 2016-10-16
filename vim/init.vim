@@ -25,7 +25,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/paredit.vim'
 Plug 'fatih/vim-go'
 Plug 'tyru/open-browser.vim'
-"Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 Plug 'wting/rust.vim'
 Plug 'cespare/vim-toml'
 Plug 'rking/ag.vim'
@@ -61,6 +61,7 @@ set completeopt-=preview
 
 noremap <leader>cd  :cd %:p:h<CR>
 noremap <leader>f   :NERDTreeFind<CR>
+noremap <C-n>       :NERDTreeToggle<CR>
 nnoremap <leader>ev :vs $MYVIMRC<CR>
 nnoremap <leader>sv :so $MYVIMRC<CR>
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
@@ -78,6 +79,7 @@ cabbrev h tab h
 let g:NERDTreeChDirMode=2
 let g:NERDTreeShowBookmarks=1
 let g:NERDTreeDirArrows=0
+let g:NERDTreeQuitOnOpen=1
 
 " paredit option
 let g:paredit_electric_return=0
@@ -90,7 +92,12 @@ vmap gx <Plug>(openbrowser-smart-search)
 
 let g:go_fmt_autosave = 1
 let g:go_bin_path = expand("~/.gotools")
-
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 
 au BufNewFile,BufRead *.clj,*cljs set filetype=clojure
 au VimEnter * RainbowParenthesesToggle
@@ -99,4 +106,10 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
 
