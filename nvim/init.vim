@@ -21,12 +21,14 @@ Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-repeat'
 Plug 'vim-scripts/paredit.vim'
 Plug 'fatih/vim-go'
 Plug 'tyru/open-browser.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'wting/rust.vim'
 Plug 'cespare/vim-toml'
+Plug 'mhinz/vim-grepper'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'neomake/neomake'
@@ -73,6 +75,7 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <leader>ev :vs $MYVIMRC<CR>
 nnoremap <leader>sv :so $MYVIMRC<CR>
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
+
 
 nnoremap j gj
 nnoremap k gk
@@ -124,3 +127,8 @@ au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
 au TabLeave *  let g:lasttab = tabpagenr()
+
+nmap gs <plug>(GrepperOperator)
+xmap gs <plug>(GrepperOperator)
+nnoremap <leader>g :Grepper -tool ag<cr>
+nnoremap <leader>* :Grepper -tool ag -cword -noprompt<cr>
