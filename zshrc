@@ -1,13 +1,20 @@
-# export LANG=ja_JP.UTF-8
-# export LC_ALL=en_US.UTF-8
 export EDITOR='nvim'
-export GOROOT="/home/mfj/go/"
-export GOPATH="/home/mfj/gopath/"
+export GOROOT="$HOME/go/"
+export GOPATH="$HOME/gopath/"
 export GOWORK="$GOPATH/src/github.com/anykao"
-export PATH="$PATH:$GOROOT/bin:$GOPATH/bin:$HOME/node-v6.8.1-linux-x64/bin/"
+export PATH="$PATH:$GOROOT/bin:$GOPATH/bin:$HOME/node/bin/"
 
 alias vi='nvim'
 alias python=python3
 alias pip=pip3
 
 [[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
+
+if [ -f $GOPATH/src/github.com/zquestz/s/autocomplete/s-completion.bash ]; then
+    . $GOPATH/src/github.com/zquestz/s/autocomplete/s-completion.bash
+fi
+
+export FZF_DEFAULT_COMMAND='ag -g ""'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
