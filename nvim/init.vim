@@ -1,5 +1,4 @@
 call plug#begin('~/.nvim/plugged/')
-
 Plug 'Raimondi/delimitMate'
 Plug 'bling/vim-airline'
 Plug 'editorconfig/editorconfig-vim'
@@ -8,7 +7,7 @@ Plug 'kien/rainbow_parentheses.vim'
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-Plug 'terryma/vim-multiple-cursors'
+"Plug 'terryma/vim-multiple-cursors'
 Plug 'thinca/vim-visualstar'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-endwise'
@@ -28,16 +27,26 @@ Plug 'tyru/open-browser.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'wting/rust.vim'
 Plug 'cespare/vim-toml'
-Plug 'rking/ag.vim'
-
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'neomake/neomake'
+Plug 'leafgarland/typescript-vim'
+Plug 'godlygeek/tabular'
+Plug 'kchmck/vim-coffee-script'
+"Plug 'junegunn/fzf.vim'
+Plug 'tomasr/molokai'
 
 call plug#end()
 
 let mapleader = ","
 
+colorscheme molokai
+let g:molokai_original = 1
+
 " colorscheme Tomorrow-Night-Eighties
 
 set clipboard=unnamed
+set clipboard+=unnamedplus
 set ffs=unix,dos
 set fileencodings=utf-8,euc-jp,cp932
 set hidden
@@ -56,7 +65,6 @@ set undodir^=~/.nvim/undo
 set directory^=~/.nvim/undo
 set iskeyword-=_
 set iskeyword+=:
-set clipboard+=unnamedplus
 set completeopt-=preview
 
 nnoremap <leader>cd  :cd %:p:h<CR>
@@ -74,7 +82,10 @@ nnoremap H ^
 nnoremap L g_
 
 cabbrev h tab h
+let g:lasttab = 1
+nmap tt :exe "tabn ".g:lasttab<CR>
 
+let g:jsx_ext_required = 0
 " nerdtree options
 let g:NERDTreeChDirMode=2
 let g:NERDTreeShowBookmarks=1
@@ -86,7 +97,7 @@ let g:paredit_electric_return=0
 let g:gocode_gofmt_tabwidth=8
 
 " open-browser
-let g:netrw_nogx = 1 " disable netrw's gx mapping. 
+let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 
@@ -112,4 +123,4 @@ au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
-
+au TabLeave *  let g:lasttab = tabpagenr()
