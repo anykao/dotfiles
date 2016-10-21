@@ -125,6 +125,6 @@ au TabLeave *  let g:lasttab = tabpagenr()
 
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
-nnoremap <leader>g :Grepper -tool ag<cr>
-nnoremap <leader>* :Grepper -tool ag -cword -noprompt<cr>
+nnoremap <leader>ag :Grepper -tool ag -grepprg ag --vimgrep<cr>
+nnoremap <leader>*  :Grepper -tool ag -cword -noprompt<cr>
 
