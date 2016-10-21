@@ -7,7 +7,7 @@ Plug 'kien/rainbow_parentheses.vim'
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-"Plug 'terryma/vim-multiple-cursors'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'thinca/vim-visualstar'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-endwise'
@@ -37,7 +37,6 @@ Plug 'godlygeek/tabular'
 Plug 'kchmck/vim-coffee-script'
 "Plug 'junegunn/fzf.vim'
 Plug 'tomasr/molokai'
-
 call plug#end()
 
 let mapleader = ","
@@ -45,10 +44,7 @@ let mapleader = ","
 colorscheme molokai
 let g:molokai_original = 1
 
-" colorscheme Tomorrow-Night-Eighties
-
-set clipboard=unnamed
-set clipboard+=unnamedplus
+set clipboard=unnamed,unnamedplus
 set ffs=unix,dos
 set fileencodings=utf-8,euc-jp,cp932
 set hidden
@@ -71,7 +67,6 @@ set completeopt-=preview
 
 nnoremap <leader>cd  :cd %:p:h<CR>
 nnoremap <leader>f   :NERDTreeFind<CR>
-nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <leader>ev :vs $MYVIMRC<CR>
 nnoremap <leader>sv :so $MYVIMRC<CR>
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
@@ -125,10 +120,11 @@ au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
-au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+au FileType go nmap <Leader>db <Plug>(go-doc-browser)
 au TabLeave *  let g:lasttab = tabpagenr()
 
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
 nnoremap <leader>g :Grepper -tool ag<cr>
 nnoremap <leader>* :Grepper -tool ag -cword -noprompt<cr>
+
