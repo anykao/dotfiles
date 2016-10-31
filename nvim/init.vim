@@ -63,7 +63,7 @@ set smartcase
 set undodir^=~/.nvim/undo
 set directory^=~/.nvim/undo
 set iskeyword-=_
-set iskeyword+=:
+"set iskeyword+=:
 set completeopt-=preview
 
 nnoremap <leader>cd  :cd %:p:h<CR>
@@ -117,15 +117,18 @@ au Syntax * RainbowParenthesesLoadBraces
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
-au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap <leader>c <Plug>(go-coverage)
-au FileType go nmap <Leader>db <Plug>(go-doc-browser)
+au FileType go nmap <leader>gr <Plug>(go-run-tab)
+au FileType go nmap <leader>gb <Plug>(go-build)
+au FileType go nmap <leader>gt <Plug>(go-test)
+au FileType go nmap <leader>gc <Plug>(go-coverage)
+au FileType go nmap <leader>gd <Plug>(go-doc-browser)
+au FileType go nmap <leader>gi <Plug>(go-info)
+au FileType go nmap <leader>ge <Plug>(go-rename)
 au TabLeave *  let g:lasttab = tabpagenr()
 
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
 nnoremap <leader>ag :Grepper -tool ag -grepprg ag --vimgrep<cr>
 nnoremap <leader>*  :Grepper -tool ag -cword -noprompt<cr>
+nnoremap <silent> <leader>q :ccl<CR>
 
