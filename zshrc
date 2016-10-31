@@ -18,3 +18,6 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 export ANDROID_HOME=/home/innolab/Android/Sdk
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+function reconnect(){
+  sudo service network-manager restart
+}
