@@ -26,7 +26,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-scripts/paredit.vim'
 Plug 'fatih/vim-go'
 Plug 'tyru/open-browser.vim'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+Plug 'Valloric/YouCompleteMe'
 Plug 'wting/rust.vim'
 Plug 'cespare/vim-toml'
 Plug 'mhinz/vim-grepper'
@@ -37,8 +37,8 @@ Plug 'neomake/neomake'
 Plug 'leafgarland/typescript-vim'
 Plug 'godlygeek/tabular'
 Plug 'kchmck/vim-coffee-script'
-"Plug 'junegunn/fzf.vim'
 Plug 'tomasr/molokai'
+Plug 'romainl/vim-qf'
 call plug#end()
 
 let mapleader = ","
@@ -100,9 +100,11 @@ let g:gocode_gofmt_tabwidth=8
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
+nmap <Home> <Plug>QfCprevious
+nmap <End>  <Plug>QfCnext
+nmap <Tab>  <Plug>QfCtoggle
 
 let g:go_fmt_autosave = 1
-let g:go_bin_path = expand("~/.gotools")
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
@@ -118,11 +120,11 @@ au Syntax * RainbowParenthesesLoadBraces
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
-au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap <leader>c <Plug>(go-coverage)
-au FileType go nmap <Leader>db <Plug>(go-doc-browser)
+au FileType go nmap <leader>gr <Plug>(go-run)
+au FileType go nmap <leader>gb <Plug>(go-build)
+au FileType go nmap <leader>gt <Plug>(go-test)
+au FileType go nmap <leader>gc <Plug>(go-coverage)
+au FileType go nmap <leader>db <Plug>(go-doc-browser)
 au TabLeave *  let g:lasttab = tabpagenr()
 
 nmap gs <plug>(GrepperOperator)
