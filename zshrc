@@ -1,8 +1,9 @@
 export EDITOR='nvim'
+export ANDROID_HOME=$HOME/Android/Sdk
 export GOROOT="$HOME/go/"
 export GOPATH="$HOME/gopath/"
 export GOWORK="$GOPATH/src/github.com/anykao"
-export PATH="$PATH:$GOROOT/bin:$GOPATH/bin:$HOME/node/bin/"
+export PATH="$PATH:$GOROOT/bin:$GOPATH/bin:$HOME/node/bin/:${ANDROID_HOME}/tools"
 
 alias vi='nvim'
 alias python=python3
@@ -21,3 +22,4 @@ export ANDROID_HOME=/home/innolab/Android/Sdk
 function reconnect(){
   sudo service network-manager restart
 }
+

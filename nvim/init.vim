@@ -26,7 +26,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-scripts/paredit.vim'
 Plug 'fatih/vim-go'
 Plug 'tyru/open-browser.vim'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+Plug 'Valloric/YouCompleteMe'
 Plug 'wting/rust.vim'
 Plug 'cespare/vim-toml'
 Plug 'mhinz/vim-grepper'
@@ -37,8 +37,8 @@ Plug 'neomake/neomake'
 Plug 'leafgarland/typescript-vim'
 Plug 'godlygeek/tabular'
 Plug 'kchmck/vim-coffee-script'
-"Plug 'junegunn/fzf.vim'
 Plug 'tomasr/molokai'
+Plug 'romainl/vim-qf'
 call plug#end()
 
 let mapleader = ","
@@ -63,7 +63,7 @@ set pastetoggle=<f12>
 set smartcase
 set undodir^=~/.nvim/undo
 set directory^=~/.nvim/undo
-set iskeyword-=_
+"set iskeyword-=_
 "set iskeyword+=:
 set completeopt-=preview
 
@@ -100,9 +100,11 @@ let g:gocode_gofmt_tabwidth=8
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
+nmap <Home> <Plug>QfCprevious
+nmap <End>  <Plug>QfCnext
+nmap <Tab>  <Plug>QfCtoggle
 
 let g:go_fmt_autosave = 1
-let g:go_bin_path = expand("~/.gotools")
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
@@ -131,5 +133,4 @@ nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
 nnoremap <leader>ag :Grepper -tool ag -grepprg ag --vimgrep<cr>
 nnoremap <leader>*  :Grepper -tool ag -cword -noprompt<cr>
-nnoremap <silent> <leader>q :ccl<CR>
 
