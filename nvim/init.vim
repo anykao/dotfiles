@@ -39,6 +39,8 @@ Plug 'godlygeek/tabular'
 Plug 'kchmck/vim-coffee-script'
 Plug 'tomasr/molokai'
 Plug 'romainl/vim-qf'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 let mapleader = ","
@@ -67,8 +69,8 @@ set directory^=~/.nvim/undo
 "set iskeyword+=:
 set completeopt-=preview
 
-nnoremap <leader>cd  :cd %:p:h<CR>
-nnoremap <leader>f   :NERDTreeFind<CR>
+nnoremap <leader>cd :cd %:p:h<CR>
+nnoremap <leader>f  :NERDTreeFind<CR>
 nnoremap <leader>ev :vs $MYVIMRC<CR>
 nnoremap <leader>sv :so $MYVIMRC<CR>
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
@@ -85,6 +87,7 @@ cabbrev h tab h
 let g:lasttab = 1
 nmap tt :exe "tabn ".g:lasttab<CR>
 
+let g:gitgutter_diff_args = '-w'
 let g:jsx_ext_required = 0
 " nerdtree options
 let g:NERDTreeChDirMode=2
@@ -100,9 +103,9 @@ let g:gocode_gofmt_tabwidth=8
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
-nmap <Home> <Plug>QfCprevious
-nmap <End>  <Plug>QfCnext
-nmap <Tab>  <Plug>QfCtoggle
+nmap <Home>     <Plug>QfCprevious
+nmap <End>      <Plug>QfCnext
+nmap <leader>q  <Plug>QfCtoggle
 
 let g:go_fmt_autosave = 1
 let g:go_highlight_functions = 1
