@@ -41,6 +41,7 @@ Plug 'tomasr/molokai'
 Plug 'romainl/vim-qf'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'pbrisbin/vim-mkdir'
 call plug#end()
 
 let mapleader = ","
