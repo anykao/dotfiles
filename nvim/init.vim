@@ -27,7 +27,7 @@ Plug 'vim-scripts/paredit.vim'
 Plug 'fatih/vim-go'
 Plug 'tyru/open-browser.vim'
 Plug 'Valloric/YouCompleteMe'
-Plug 'wting/rust.vim'
+Plug 'rust-lang/rust.vim'
 Plug 'cespare/vim-toml'
 Plug 'mhinz/vim-grepper'
 Plug 'pangloss/vim-javascript'
@@ -108,6 +108,7 @@ nmap <Home>     <Plug>QfCprevious
 nmap <End>      <Plug>QfCnext
 nmap <leader>q  <Plug>QfCtoggle
 
+let g:rustfmt_autosave = 1
 let g:go_fmt_autosave = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
