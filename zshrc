@@ -16,7 +16,7 @@ if [ -f $GOPATH/src/github.com/zquestz/s/autocomplete/s-completion.bash ]; then
 fi
 
 export FZF_DEFAULT_COMMAND='ag -g ""'
-export RUST_SRC_PATH="$HOME/repos/rust/src"
+export RUST_SRC_PATH="$HOME/.multirust/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
 export ANDROID_HOME=/home/innolab/Android/Sdk
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
