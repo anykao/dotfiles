@@ -3,7 +3,6 @@ Plug 'Raimondi/delimitMate'
 Plug 'bling/vim-airline'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'guns/vim-clojure-static'
-Plug 'kien/rainbow_parentheses.vim'
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -37,7 +36,6 @@ Plug 'gavocanov/vim-js-indent'
 Plug 'neomake/neomake'
 Plug 'leafgarland/typescript-vim'
 Plug 'godlygeek/tabular'
-Plug 'kchmck/vim-coffee-script'
 Plug 'tomasr/molokai'
 Plug 'romainl/vim-qf'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -50,11 +48,13 @@ let mapleader = ","
 colorscheme molokai
 let g:molokai_original = 1
 
+set termguicolors
 set clipboard=unnamed,unnamedplus
 set ffs=unix,dos
 set fileencodings=utf-8,euc-jp,cp932
 set hidden
 set hlsearch
+set smartcase
 set ignorecase
 set list
 set nobackup
@@ -63,8 +63,6 @@ set nowritebackup
 set noswapfile
 set number
 set nowrap
-set pastetoggle=<f12>
-set smartcase
 set undodir^=~/.nvim/undo
 set directory^=~/.nvim/undo
 "set iskeyword-=_
@@ -97,10 +95,6 @@ let g:NERDTreeShowBookmarks=1
 let g:NERDTreeDirArrows=0
 let g:NERDTreeQuitOnOpen=1
 
-" paredit option
-let g:paredit_electric_return=0
-let g:gocode_gofmt_tabwidth=8
-
 " open-browser
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
@@ -117,14 +111,7 @@ let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-
-au BufNewFile,BufRead *.clj,*cljs set filetype=clojure
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
-au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+let g:gocode_gofmt_tabwidth=8
 
 au FileType go nmap <leader>gr <Plug>(go-run-tab)
 au FileType go nmap <leader>gb <Plug>(go-build)
