@@ -8,6 +8,7 @@ export PATH="$PATH:$HOME/VSCode-linux-x64/bin:$GOROOT/bin:$GOPATH/bin:$HOME/node
 alias vi='nvim'
 alias python=python3
 alias pip=pip3
+setopt nocorrect
 
 [[ -z "$TMUX" && ! -z "$PS1" ]] && exec tmux
 
