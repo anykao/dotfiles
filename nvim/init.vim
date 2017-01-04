@@ -41,6 +41,7 @@ Plug 'romainl/vim-qf'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'pbrisbin/vim-mkdir'
+Plug 'timonv/vim-cargo'
 call plug#end()
 
 let mapleader = ","
@@ -66,7 +67,7 @@ set nowrap
 set undodir^=~/.nvim/undo
 set directory^=~/.nvim/undo
 "set iskeyword-=_
-"set iskeyword+=:
+set iskeyword+=/
 set completeopt-=preview
 
 nnoremap <leader>cd :cd %:p:h<CR>

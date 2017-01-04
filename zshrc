@@ -3,7 +3,7 @@ export ANDROID_HOME=$HOME/Android/Sdk
 export GOROOT="$HOME/go/"
 export GOPATH="$HOME/gopath/"
 export GOWORK="$GOPATH/src/github.com/anykao"
-export PATH="$PATH:$HOME/VSCode-linux-x64/bin:$GOROOT/bin:$GOPATH/bin:$HOME/node/bin/:${ANDROID_HOME}/tools"
+export PATH="$PATH:$HOME/VSCode-linux-x64/bin:$GOROOT/bin:$GOPATH/bin:$HOME/node/bin:${ANDROID_HOME}/tools"
 
 alias vi='nvim'
 alias python=python3
