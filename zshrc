@@ -8,6 +8,7 @@ export PATH="$PATH:$HOME/VSCode-linux-x64/bin:$GOROOT/bin:$GOPATH/bin:$HOME/node
 alias vi='nvim'
 alias python=python3
 alias pip=pip3
+setopt nocorrect
 
 [[ -z "$TMUX" && ! -z "$PS1" ]] && exec tmux
 
@@ -17,7 +18,6 @@ fi
 
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export RUST_SRC_PATH="$HOME/.multirust/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
-export ANDROID_HOME=/home/innolab/Android/Sdk
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 function reconnect(){
