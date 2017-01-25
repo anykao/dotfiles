@@ -42,6 +42,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'timonv/vim-cargo'
+Plug 'christoomey/vim-tmux-runner'
 call plug#end()
 
 let mapleader = ","
@@ -83,6 +84,7 @@ vnoremap < <gv
 vnoremap > >gv
 nnoremap H ^
 nnoremap L g_
+xnoremap p "_dp
 
 cabbrev h tab h
 let g:lasttab = 1
