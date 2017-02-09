@@ -50,7 +50,6 @@ let mapleader = ","
 colorscheme molokai
 let g:molokai_original = 1
 
-set termguicolors
 set clipboard=unnamed,unnamedplus
 set ffs=unix,dos
 set fileencodings=utf-8,euc-jp,cp932
@@ -77,14 +76,12 @@ nnoremap <leader>ev :vs $MYVIMRC<CR>
 nnoremap <leader>sv :so $MYVIMRC<CR>
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
-
 nnoremap j gj
 nnoremap k gk
 vnoremap < <gv
 vnoremap > >gv
 nnoremap H ^
 nnoremap L g_
-xnoremap p "_dp
 
 cabbrev h tab h
 let g:lasttab = 1
