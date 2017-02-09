@@ -8,6 +8,7 @@ export RUST_SRC_PATH="$HOME/.multirust/toolchains/stable-x86_64-unknown-linux-gn
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
 alias vi='nvim'
+alias gowork="cd $GOPATH/src/gowork"
 alias python=python3
 alias pip=pip3
 setopt nocorrect
