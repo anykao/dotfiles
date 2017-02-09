@@ -72,6 +72,7 @@ set completeopt-=preview
 
 nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>f  :NERDTreeFind<CR>
+nnoremap <leader>t  :NERDTreeToggle<CR>
 nnoremap <leader>ev :vs $MYVIMRC<CR>
 nnoremap <leader>sv :so $MYVIMRC<CR>
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
