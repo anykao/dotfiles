@@ -23,6 +23,7 @@ Plug 'tpope/vim-repeat'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-scripts/paredit.vim'
 Plug 'fatih/vim-go'
+Plug 'bumaociyuan/vim-swift'
 Plug 'tyru/open-browser.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'rust-lang/rust.vim'
@@ -43,6 +44,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'timonv/vim-cargo'
 Plug 'christoomey/vim-tmux-runner'
+Plug 'artur-shaik/vim-javacomplete2'
 call plug#end()
 
 let mapleader = ","
