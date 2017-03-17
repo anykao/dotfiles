@@ -106,6 +106,7 @@ nmap <Home>     <Plug>QfCprevious
 nmap <End>      <Plug>QfCnext
 nmap <leader>q  <Plug>QfCtoggle
 
+let g:vim_markdown_folding_disabled = 1
 let g:rustfmt_autosave = 1
 let g:go_fmt_autosave = 1
 let g:go_highlight_functions = 1
