@@ -9,7 +9,7 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 export PATH="$PATH:$HOME/.skim/bin"
 
 alias vi='nvim'
-alias vin="nvim --noplugin"
+alias vide='nvim -u $HOME/.config/nvim/ide.vim'
 alias gowork="cd $GOPATH/src/gowork"
 alias registry="cd $HOME/.cargo/registry/src"
 alias python=python3
