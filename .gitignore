@@ -1,7 +1,5 @@
-vim/bundle
-vim/plugged
-vim/autoload
-vim/colors
 nvim/.netrwhist
+nvim/backup.vim
+nvim/undo
 
 *.log
