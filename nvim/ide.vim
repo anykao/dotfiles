@@ -9,7 +9,9 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-surround'
 Plug 'fatih/vim-go'
-Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'zchee/deoplete-jedi'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
@@ -18,15 +20,13 @@ Plug 'gavocanov/vim-js-indent'
 Plug 'airblade/vim-gitgutter'
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
-" Plug 'othree/html5.vim'
-" Plug 'bumaociyuan/vim-swift'
+Plug 'othree/html5.vim'
+Plug 'bumaociyuan/vim-swift'
 Plug 'keith/swift.vim'
 Plug 'tyru/open-browser.vim'
 Plug 'mhinz/vim-grepper'
 Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdcommenter'
-Plug 'artur-shaik/vim-javacomplete2'
-Plug 'zchee/deoplete-jedi'
 call plug#end()
 
 let mapleader = ","
@@ -35,7 +35,8 @@ colorscheme molokai
 let g:molokai_original = 1
 
 "set clipboard=unnamed,unnamedplus
-set clipboard=unnamed
+"set clipboard=unnamed
+set clipboard+=unnamedplus
 set ffs=unix,dos
 set fileencodings=utf-8,euc-jp,cp932
 set hidden

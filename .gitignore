@@ -1,5 +1,6 @@
 nvim/.netrwhist
 nvim/backup.vim
 nvim/undo
+plugged/
 
 *.log
