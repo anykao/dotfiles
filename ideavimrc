@@ -1,0 +1,12 @@
+set clipboard+=unnamed
+set ignorecase
+set incsearch
+set hlsearch
+set number
+set surround
+
+let mapleader=","
+
+noremap <Leader>f :action ToggleFullScreen<cr>
+noremap <Leader>d :action ToggleDistractionFreeMode<cr>
+noremap <Leader><Esc> :action HideSideWindows<cr>
