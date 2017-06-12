@@ -7,6 +7,9 @@ set surround
 
 let mapleader=","
 
-noremap <Leader>f :action ToggleFullScreen<cr>
-noremap <Leader>d :action ToggleDistractionFreeMode<cr>
-noremap <Leader><Esc> :action HideSideWindows<cr>
+noremap <leader>f :action ToggleFullScreen<CR>
+noremap <leader>b :action ToggleLineBreakpoint<CR>
+noremap <leader>d :action ToggleDistractionFreeMode<CR>
+noremap <leader>q :action HideAllWindows<CR>
+noremap <C-p> <UP>
+noremap <C-n> <Down>
