@@ -7,9 +7,13 @@ set surround
 
 let mapleader=","
 
+noremap <leader>r :action Run<CR>
 noremap <leader>f :action ToggleFullScreen<CR>
 noremap <leader>b :action ToggleLineBreakpoint<CR>
 noremap <leader>d :action ToggleDistractionFreeMode<CR>
 noremap <leader>q :action HideAllWindows<CR>
+noremap g;        :action JumpToLastChange<CR>
+noremap <leader>sv :source ~/.ideavimrc<CR>
+
 noremap <C-p> <UP>
 noremap <C-n> <Down>
