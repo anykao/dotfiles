@@ -8,6 +8,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-go', { 'do': 'make'}
@@ -16,6 +17,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'posva/vim-vue'
 Plug 'gavocanov/vim-js-indent'
 Plug 'airblade/vim-gitgutter'
 Plug 'rust-lang/rust.vim'
@@ -46,8 +48,9 @@ set list
 nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>ev :vs $HOME/dotfiles/nvim/ide.vim<CR>
 nnoremap <leader>sv :so $HOME/dotfiles/nvim/ide.vim<CR>
-nnoremap <leader>f  :Dirvish %<CR>
-nnoremap q  :<CR>
+"nnoremap <leader>f  :Dirvish %<CR>
+nnoremap <C-_> :call NERDComment(0,"toggle")<CR>
+
 
 nnoremap j gj
 nnoremap k gk
@@ -80,10 +83,17 @@ let g:gocode_gofmt_tabwidth=8
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 
-au TabLeave *  let g:lasttab = tabpagenr()
-
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
 nnoremap <leader>ag :Grepper -tool ag -grepprg ag --vimgrep<cr>
 nnoremap <leader>*  :Grepper -tool ag -cword -noprompt<cr>
+
+au TabLeave *  let g:lasttab = tabpagenr()
+au FileType rust nmap gd <Plug>(rust-def)
+"au FileType rust nmap gs <Plug>(rust-def-split)
+"au FileType rust nmap gx <Plug>(rust-def-vertical)
+au FileType rust nmap <leader>gd <Plug>(rust-doc)
+
+au BufRead *.rs :setlocal tags=./rusty-tags.vi;/
+"au BufWrite *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&"
 

@@ -11,6 +11,7 @@ Plug 'tyru/open-browser.vim'
 Plug 'mhinz/vim-grepper'
 Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdcommenter'
+Plug 'keith/swift.vim'
 call plug#end()
 
 let mapleader = ","
@@ -18,8 +19,8 @@ let mapleader = ","
 colorscheme molokai
 let g:molokai_original = 1
 
-"set clipboard=unnamed,unnamedplus
-set clipboard=unnamed
+set clipboard=unnamed,unnamedplus
+
 set ffs=unix,dos
 set fileencodings=utf-8,euc-jp,cp932
 set hidden
@@ -44,8 +45,8 @@ cabbrev h tab h
 let g:lasttab = 1
 nmap tt :exe "tabn ".g:lasttab<CR>
 
-
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_smart_case = 1
 let g:deoplete#auto_completion_start_length = 0
 " open-browser
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
