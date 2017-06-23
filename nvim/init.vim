@@ -19,8 +19,7 @@ let mapleader = ","
 colorscheme molokai
 let g:molokai_original = 1
 
-set clipboard=unnamed,unnamedplus
-
+set clipboard+=unnamedplus
 set ffs=unix,dos
 set fileencodings=utf-8,euc-jp,cp932
 set hidden
@@ -30,7 +29,6 @@ set list
 nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>ev :vs $MYVIMRC<CR>
 nnoremap <leader>sv :so $MYVIMRC<CR>
-nnoremap <leader>f  :Dirvish %<CR>
 nnoremap <C-_> :call NERDComment(0,"toggle")<CR>
 
 
@@ -59,4 +57,5 @@ nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
 nnoremap <leader>ag :Grepper -tool ag -grepprg ag --vimgrep<cr>
 nnoremap <leader>*  :Grepper -tool ag -cword -noprompt<cr>
+
 
