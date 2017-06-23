@@ -31,7 +31,7 @@ nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>ev :vs $MYVIMRC<CR>
 nnoremap <leader>sv :so $MYVIMRC<CR>
 nnoremap <leader>f  :Dirvish %<CR>
-nnoremap q  :<CR>
+nnoremap <C-_> :call NERDComment(0,"toggle")<CR>
 
 
 nnoremap j gj
