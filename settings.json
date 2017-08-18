@@ -1,0 +1,14 @@
+// Windows %APPDATA%\Code\User\settings.json
+// Mac $HOME/Library/Application Support/Code/User/settings.json
+// Linux $HOME/.config/Code/User/settings.json
+
+{
+    "go.gopath": "/Users/developer/gopath",
+    "go.goroot": "/Users/developer/go",
+    "vim.useSystemClipboard": true,
+    "vim.visualstar": true,
+    "vim.useCtrlKeys": true,
+    "vim.handleKeys": {},
+    "vim.leader": ",",
+    "vim.disableAnnoyingNeovimMessage": true
+}
