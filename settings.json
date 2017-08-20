@@ -3,12 +3,17 @@
 // Linux $HOME/.config/Code/User/settings.json
 
 {
-    "go.gopath": "/Users/developer/gopath",
-    "go.goroot": "/Users/developer/go",
+    "prettier.printWidth": 120,
+    "prettier.tabWidth": 4,
+    "prettier.singleQuote": false,
+    "prettier.trailingComma": "es5",
+    "prettier.semi": false,
+    "go.inferGopath": true,
     "vim.useSystemClipboard": true,
     "vim.visualstar": true,
-    "vim.useCtrlKeys": true,
+    "vim.useCtrlKeys": false,
     "vim.handleKeys": {},
     "vim.leader": ",",
-    "vim.disableAnnoyingNeovimMessage": true
+    "vim.disableAnnoyingNeovimMessage": true,
+    "editor.formatOnSave": true
 }
