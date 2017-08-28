@@ -60,8 +60,6 @@
     "prettier.singleQuote": false,
     "prettier.trailingComma": "es5",
     "prettier.semi": false,
-    "go.gopath": "/Users/developer/gopath",
-    "go.goroot": "/Users/developer/go",
     "go.inferGopath": true,
     "vim.useSystemClipboard": true,
     "vim.visualstar": true,
