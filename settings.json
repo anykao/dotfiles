@@ -1,11 +1,16 @@
-// Windows %APPDATA%\Code\User\settings.json
-// Mac $HOME/Library/Application Support/Code/User/settings.json
-// Linux $HOME/.config/Code/User/settings.json
-
 {
+    "vim.hlsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.easymotion": true,
+    "vim.visualstar": true,
+    "vim.useCtrlKeys": false,
+    "vim.handleKeys": {},
+    "vim.leader": ",",
+    "vim.enableNeovim": true,
+    "vim.disableAnnoyingNeovimMessage": true,
     "vim.otherModesKeyBindingsNonRecursive": [
         {
-            "before": ["leader", "t"] ,
+            "before": ["leader", "t"],
             "after": [],
             "commands": [
                 {
@@ -15,7 +20,7 @@
             ]
         },
         {
-            "before": ["leader", "p"] ,
+            "before": ["leader", "p"],
             "after": [],
             "commands": [
                 {
@@ -25,7 +30,7 @@
             ]
         },
         {
-            "before": ["leader", "f"] ,
+            "before": ["leader", "f"],
             "after": [],
             "commands": [
                 {
@@ -35,7 +40,27 @@
             ]
         },
         {
-            "before": ["leader", "z"] ,
+            "before": ["leader", "w"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.switchWindow",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["leader", "r"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.reloadWindow",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["leader", "z"],
             "after": [],
             "commands": [
                 {
@@ -45,7 +70,27 @@
             ]
         },
         {
-            "before": ["leader", "c"] ,
+            "before": ["leader", "n"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.marker.next",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["g", "x"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "extension.openBrowser",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["leader", "c"],
             "after": [],
             "commands": [
                 {
@@ -61,11 +106,6 @@
     "prettier.trailingComma": "es5",
     "prettier.semi": false,
     "go.inferGopath": true,
-    "vim.useSystemClipboard": true,
-    "vim.visualstar": true,
-    "vim.useCtrlKeys": false,
-    "vim.handleKeys": {},
-    "vim.leader": ",",
-    "vim.disableAnnoyingNeovimMessage": true,
+    "editor.fontSize": 16,
     "editor.formatOnSave": true
 }
