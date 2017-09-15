@@ -40,6 +40,16 @@
             ]
         },
         {
+            "before": ["leader", "e"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.quickOpen",
+                    "args": []
+                }
+            ]
+        },
+        {
             "before": ["leader", "w"],
             "after": [],
             "commands": [
@@ -61,6 +71,16 @@
         },
         {
             "before": ["leader", "z"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.toggleZenMode",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["leader", "q"],
             "after": [],
             "commands": [
                 {
@@ -107,5 +127,6 @@
     "prettier.semi": false,
     "go.inferGopath": true,
     "editor.fontSize": 16,
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.renderWhitespace": "none"
 }
