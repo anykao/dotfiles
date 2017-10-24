@@ -128,5 +128,9 @@
     "go.inferGopath": true,
     "editor.fontSize": 16,
     "editor.formatOnSave": true,
-    "editor.renderWhitespace": "none"
+    "editor.renderWhitespace": "none",
+    "python.linting.enabledWithoutWorkspace": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "dart.debugSdkLibraries": false,
+    "dart.debugExternalLibraries": false
 }
