@@ -7,7 +7,6 @@
     "vim.handleKeys": {},
     "vim.leader": ",",
     "vim.enableNeovim": true,
-    "vim.disableAnnoyingNeovimMessage": true,
     "vim.otherModesKeyBindingsNonRecursive": [
         {
             "before": ["leader", "t"],
@@ -126,11 +125,15 @@
     "prettier.trailingComma": "es5",
     "prettier.semi": false,
     "go.inferGopath": true,
+    "rust.unstable_features": true,
+    "rust.workspace_mode": true,
     "editor.fontSize": 16,
     "editor.formatOnSave": true,
     "editor.renderWhitespace": "none",
+    "python.linting.pylintEnabled": false,
     "python.linting.enabledWithoutWorkspace": false,
     "workbench.startupEditor": "newUntitledFile",
     "dart.debugSdkLibraries": false,
-    "dart.debugExternalLibraries": false
+    "dart.debugExternalLibraries": false,
+    "window.zoomLevel": 0
 }

@@ -17,6 +17,7 @@ nmap <leader>b :action ToggleLineBreakpoint<CR>
 nmap <leader>a :action Flutter.ReloadFlutterApp<CR>
 nmap <leader>x :action Exit<CR>
 nmap g;        :action JumpToLastChange<CR>
+nmap gr        :action ReformatCode<CR>
 nmap <leader>sv :source ~/.ideavimrc<CR>
 
 noremap <C-p> <UP>
