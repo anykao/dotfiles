@@ -13,12 +13,12 @@ nmap <leader>f :action ToggleFullScreen<CR>
 nmap <leader>e :action RecentFiles<cr>
 nmap <leader>q :action HideAllWindows<CR>
 nmap <leader>z :action ToggleDistractionFreeMode<CR>
-nmap <leader>b :action ToggleLineBreakpoint<CR>
 nmap <leader>a :action Flutter.ReloadFlutterApp<CR>
 nmap <leader>x :action Exit<CR>
+
 nmap g;        :action JumpToLastChange<CR>
 nmap gr        :action ReformatCode<CR>
-nmap <leader>sv :source ~/.ideavimrc<CR>
 
-noremap <C-p> <UP>
-noremap <C-n> <Down>
+nmap ``         :action Back<CR>
+nmap <leader>sv :source ~/.ideavimrc<CR>
+nmap <C-p>      :action GotoFile<CR>
