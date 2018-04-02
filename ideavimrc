@@ -21,4 +21,4 @@ nmap gr        :action ReformatCode<CR>
 
 nmap ``         :action Back<CR>
 nmap <leader>sv :source ~/.ideavimrc<CR>
-nmap <C-p>      :action GotoFile<CR>
+nmap <M-p>      :action GotoFile<CR>

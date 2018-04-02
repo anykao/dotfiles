@@ -1,139 +1,179 @@
 {
-    "vim.hlsearch": true,
-    "vim.useSystemClipboard": true,
-    "vim.easymotion": true,
-    "vim.visualstar": true,
-    "vim.useCtrlKeys": false,
-    "vim.handleKeys": {},
-    "vim.leader": ",",
-    "vim.enableNeovim": true,
-    "vim.otherModesKeyBindingsNonRecursive": [
+  "prettier.printWidth": 120,
+  "prettier.tabWidth": 4,
+  "prettier.singleQuote": false,
+  "prettier.trailingComma": "es5",
+  "prettier.semi": true,
+  "go.gopath": "/Users/developer/gopath",
+  // "rust.unstable_features": true,
+  // "rust.workspace_mode": true,
+  "editor.fontSize": 16,
+  "editor.formatOnSave": true,
+  "editor.renderWhitespace": "none",
+  "python.linting.pylintEnabled": false,
+  "python.pythonPath": "/Users/developer/.local/share/virtualenvs/test-aDdsxyl_",
+  "python.formatting.autopep8Path": "/usr/local/bin/autopep8",
+  "python.linting.pylintPath": "/usr/local/bin/pylint",
+  "workbench.startupEditor": "newUntitledFile",
+  "dart.debugSdkLibraries": false,
+  "dart.debugExternalLibraries": false,
+  "window.zoomLevel": 0,
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "rust": "html",
+  },
+  "vim.hlsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.easymotion": true,
+  "vim.visualstar": true,
+  "vim.useCtrlKeys": false,
+  "vim.handleKeys": {},
+  "vim.leader": ",",
+  "vim.enableNeovim": true,
+  "vim.neovimPath": "/usr/local/bin/nvim",
+  "vim.otherModesKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "leader",
+        "t"
+      ],
+      "after": [],
+      "commands": [
         {
-            "before": ["leader", "t"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.terminal.toggleTerminal",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": ["leader", "p"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.actions.view.problems",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": ["leader", "f"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.toggleFullScreen",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": ["leader", "e"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.quickOpen",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": ["leader", "w"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.switchWindow",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": ["leader", "r"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.reloadWindow",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": ["leader", "z"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.toggleZenMode",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": ["leader", "q"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.toggleZenMode",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": ["leader", "n"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "editor.action.marker.next",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": ["g", "x"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "extension.openBrowser",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": ["leader", "c"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.showCommands",
-                    "args": []
-                }
-            ]
+          "command": "workbench.action.terminal.toggleTerminal",
+          "args": []
         }
-    ],
-    "prettier.printWidth": 120,
-    "prettier.tabWidth": 4,
-    "prettier.singleQuote": false,
-    "prettier.trailingComma": "es5",
-    "prettier.semi": false,
-    "go.inferGopath": true,
-    "rust.unstable_features": true,
-    "rust.workspace_mode": true,
-    "editor.fontSize": 16,
-    "editor.formatOnSave": true,
-    "editor.renderWhitespace": "none",
-    "python.linting.pylintEnabled": false,
-    "python.linting.enabledWithoutWorkspace": false,
-    "workbench.startupEditor": "newUntitledFile",
-    "dart.debugSdkLibraries": false,
-    "dart.debugExternalLibraries": false,
-    "window.zoomLevel": 0
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "p"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.actions.view.problems",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "f"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.toggleFullScreen",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "e"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.quickOpen",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "w"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.switchWindow",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "r"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.reloadWindow",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "z"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.toggleZenMode",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "q"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.toggleZenMode",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "n"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.marker.next",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "x"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "extension.openBrowser",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "c"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.showCommands",
+          "args": []
+        }
+      ]
+    }
+  ]
 }
