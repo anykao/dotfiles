@@ -1,9 +1,9 @@
 {
   "prettier.printWidth": 120,
-  "prettier.tabWidth": 4,
   "prettier.singleQuote": false,
   "prettier.trailingComma": "es5",
   "prettier.semi": true,
+  "prettier.jsxBracketSameLine": true,
   "go.gopath": "/Users/developer/gopath",
   // "rust.unstable_features": true,
   // "rust.workspace_mode": true,
@@ -11,7 +11,7 @@
   "editor.formatOnSave": true,
   "editor.renderWhitespace": "none",
   "python.linting.pylintEnabled": false,
-  "python.pythonPath": "/Users/developer/.local/share/virtualenvs/test-aDdsxyl_",
+  "python.pythonPath": "/Users/developer/.local/share/virtualenvs/TwitchBot-DhZC1P_e",
   "python.formatting.autopep8Path": "/usr/local/bin/autopep8",
   "python.linting.pylintPath": "/usr/local/bin/pylint",
   "workbench.startupEditor": "newUntitledFile",
@@ -19,9 +19,10 @@
   "dart.debugExternalLibraries": false,
   "window.zoomLevel": 0,
   "emmet.triggerExpansionOnTab": true,
-  "emmet.includeLanguages": {
-    "rust": "html",
-  },
+  // "emmet.includeLanguages": {
+  //   "rust": "html",
+  //   "javascript": "html"
+  // },
   "vim.hlsearch": true,
   "vim.useSystemClipboard": true,
   "vim.easymotion": true,
@@ -34,123 +35,6 @@
   "vim.otherModesKeyBindingsNonRecursive": [
     {
       "before": [
-        "leader",
-        "t"
-      ],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.terminal.toggleTerminal",
-          "args": []
-        }
-      ]
-    },
-    {
-      "before": [
-        "leader",
-        "p"
-      ],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.actions.view.problems",
-          "args": []
-        }
-      ]
-    },
-    {
-      "before": [
-        "leader",
-        "f"
-      ],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.toggleFullScreen",
-          "args": []
-        }
-      ]
-    },
-    {
-      "before": [
-        "leader",
-        "e"
-      ],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.quickOpen",
-          "args": []
-        }
-      ]
-    },
-    {
-      "before": [
-        "leader",
-        "w"
-      ],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.switchWindow",
-          "args": []
-        }
-      ]
-    },
-    {
-      "before": [
-        "leader",
-        "r"
-      ],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.reloadWindow",
-          "args": []
-        }
-      ]
-    },
-    {
-      "before": [
-        "leader",
-        "z"
-      ],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.toggleZenMode",
-          "args": []
-        }
-      ]
-    },
-    {
-      "before": [
-        "leader",
-        "q"
-      ],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.toggleZenMode",
-          "args": []
-        }
-      ]
-    },
-    {
-      "before": [
-        "leader",
-        "n"
-      ],
-      "after": [],
-      "commands": [
-        {
-          "command": "editor.action.marker.next",
-          "args": []
-        }
-      ]
-    },
-    {
-      "before": [
         "g",
         "x"
       ],
@@ -158,19 +42,6 @@
       "commands": [
         {
           "command": "extension.openBrowser",
-          "args": []
-        }
-      ]
-    },
-    {
-      "before": [
-        "leader",
-        "c"
-      ],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.showCommands",
           "args": []
         }
       ]
