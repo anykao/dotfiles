@@ -27,9 +27,6 @@ call plug#end()
 
 let mapleader = ","
 
-colorscheme molokai
-let g:molokai_original = 1
-
 set clipboard+=unnamedplus
 set ffs=unix,dos
 set fileencodings=utf-8,euc-jp,cp932
@@ -81,8 +78,6 @@ nnoremap <leader>*  :Grepper -tool ag -cword -noprompt<cr>
 
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
-    \ 'javascript': ['javascript-typescript-stdio'],
-    \ 'javascript.jsx': ['javascript-typescript-stdio'],
     \ }
 
 nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
